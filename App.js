@@ -1,25 +1,24 @@
-import React from 'react';
-import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import Wow from './Wow';
-import Try from './Try';
+import { StyleSheet, Text, View ,Button} from 'react-native';
 
-const Drawer = createDrawerNavigator();
-
-function MyDrawer() {
+export default function App() {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator>
-        <Drawer.Screen name="feed">
-          {(props) => <Wow {...props} />}
-        </Drawer.Screen>
-        <Drawer.Screen name="Article">
-          {(props) => <Try {...props} />}
-        </Drawer.Screen>
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <View style={styles.container}>
+
+      <Text style ={styles.test}>Open up App.js to start working on your app!</Text>
+      <Button title='Click me '/>
+    </View>
   );
 }
 
-export default MyDrawer;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  test : {
+    backgroundColor : '#3cb371'
+  }
+
+});
